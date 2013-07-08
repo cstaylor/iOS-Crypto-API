@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[StreamTestCase testStreaming]:StreamTestCase.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "errno">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[CipherInputStream read:maxLength:]:CipherInputStream.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "errno">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

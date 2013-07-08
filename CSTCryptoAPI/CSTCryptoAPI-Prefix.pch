@@ -24,4 +24,7 @@
     #import "AESCipher.h"
 
     #import "RSAKey.h"
+    #import "KeyWrapper.h"
+    #import "AESKeyWrapper.h"
+    #import "CipherStream.h"
 #endif

@@ -30,6 +30,11 @@
 		9077A6AD178A5DB400FDA822 /* AESCipherTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A6AC178A5DB400FDA822 /* AESCipherTestCase.m */; };
 		9077A6B0178A5E7100FDA822 /* RSAKey+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A6AF178A5E7100FDA822 /* RSAKey+Private.m */; };
 		9077A6B3178A612500FDA822 /* RSAKeyTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A6B2178A612500FDA822 /* RSAKeyTestCase.m */; };
+		9089002C178A911B005E50B7 /* AESKeyWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9089002B178A911B005E50B7 /* AESKeyWrapper.m */; };
+		9089002F178A915C005E50B7 /* AESKeyWrapperTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9089002E178A915C005E50B7 /* AESKeyWrapperTestCase.m */; };
+		90890037178A9553005E50B7 /* CipherOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 90890036178A9553005E50B7 /* CipherOutputStream.m */; };
+		9089003A178A9765005E50B7 /* StreamTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 90890039178A9765005E50B7 /* StreamTestCase.m */; };
+		9089003F178A9CC2005E50B7 /* NSFileManager+iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9089003D178A9BEF005E50B7 /* NSFileManager+iOS.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,17 @@
 		9077A6AF178A5E7100FDA822 /* RSAKey+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSAKey+Private.m"; sourceTree = "<group>"; };
 		9077A6B1178A612500FDA822 /* RSAKeyTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAKeyTestCase.h; sourceTree = "<group>"; };
 		9077A6B2178A612500FDA822 /* RSAKeyTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAKeyTestCase.m; sourceTree = "<group>"; };
+		90890029178A90EA005E50B7 /* KeyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyWrapper.h; sourceTree = "<group>"; };
+		9089002A178A911B005E50B7 /* AESKeyWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESKeyWrapper.h; sourceTree = "<group>"; };
+		9089002B178A911B005E50B7 /* AESKeyWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESKeyWrapper.m; sourceTree = "<group>"; };
+		9089002D178A915C005E50B7 /* AESKeyWrapperTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESKeyWrapperTestCase.h; sourceTree = "<group>"; };
+		9089002E178A915C005E50B7 /* AESKeyWrapperTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESKeyWrapperTestCase.m; sourceTree = "<group>"; };
+		90890031178A93D4005E50B7 /* CipherStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherStream.h; sourceTree = "<group>"; };
+		90890036178A9553005E50B7 /* CipherOutputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherOutputStream.m; sourceTree = "<group>"; };
+		90890038178A9765005E50B7 /* StreamTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamTestCase.h; sourceTree = "<group>"; };
+		90890039178A9765005E50B7 /* StreamTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamTestCase.m; sourceTree = "<group>"; };
+		9089003C178A9BEF005E50B7 /* NSFileManager+iOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+iOS.h"; sourceTree = "<group>"; };
+		9089003D178A9BEF005E50B7 /* NSFileManager+iOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+iOS.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +171,8 @@
 		9077A651178A52AF00FDA822 /* CSTCryptoAPI */ = {
 			isa = PBXGroup;
 			children = (
+				90890030178A93AC005E50B7 /* CipherStream */,
+				90890028178A90AF005E50B7 /* KeyWrapping */,
 				9077A6A6178A5C1100FDA822 /* Categories */,
 				9077A69D178A5B6500FDA822 /* RSAKey */,
 				9077A684178A547800FDA822 /* KeyGenerator */,
@@ -187,6 +205,10 @@
 				9077A6AC178A5DB400FDA822 /* AESCipherTestCase.m */,
 				9077A6B1178A612500FDA822 /* RSAKeyTestCase.h */,
 				9077A6B2178A612500FDA822 /* RSAKeyTestCase.m */,
+				9089002D178A915C005E50B7 /* AESKeyWrapperTestCase.h */,
+				9089002E178A915C005E50B7 /* AESKeyWrapperTestCase.m */,
+				90890038178A9765005E50B7 /* StreamTestCase.h */,
+				90890039178A9765005E50B7 /* StreamTestCase.m */,
 			);
 			path = CSTCryptoAPITests;
 			sourceTree = "<group>";
@@ -272,6 +294,7 @@
 		9077A6A6178A5C1100FDA822 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				9089003B178A9BD7005E50B7 /* NSFileManager+iOS */,
 				9077A6A7178A5C1D00FDA822 /* NSData+Base64 */,
 				9077A68C178A56A800FDA822 /* NSData+Random */,
 				9077A6A2178A5BC800FDA822 /* NSString+PEM */,
@@ -286,6 +309,34 @@
 				9077A6A9178A5C3300FDA822 /* NSData+Base64.m */,
 			);
 			name = "NSData+Base64";
+			sourceTree = "<group>";
+		};
+		90890028178A90AF005E50B7 /* KeyWrapping */ = {
+			isa = PBXGroup;
+			children = (
+				90890029178A90EA005E50B7 /* KeyWrapper.h */,
+				9089002A178A911B005E50B7 /* AESKeyWrapper.h */,
+				9089002B178A911B005E50B7 /* AESKeyWrapper.m */,
+			);
+			name = KeyWrapping;
+			sourceTree = "<group>";
+		};
+		90890030178A93AC005E50B7 /* CipherStream */ = {
+			isa = PBXGroup;
+			children = (
+				90890031178A93D4005E50B7 /* CipherStream.h */,
+				90890036178A9553005E50B7 /* CipherOutputStream.m */,
+			);
+			name = CipherStream;
+			sourceTree = "<group>";
+		};
+		9089003B178A9BD7005E50B7 /* NSFileManager+iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9089003C178A9BEF005E50B7 /* NSFileManager+iOS.h */,
+				9089003D178A9BEF005E50B7 /* NSFileManager+iOS.m */,
+			);
+			name = "NSFileManager+iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +446,8 @@
 				9077A6A5178A5BE700FDA822 /* NSString+PEM.m in Sources */,
 				9077A6AA178A5C3300FDA822 /* NSData+Base64.m in Sources */,
 				9077A6B0178A5E7100FDA822 /* RSAKey+Private.m in Sources */,
+				9089002C178A911B005E50B7 /* AESKeyWrapper.m in Sources */,
+				90890037178A9553005E50B7 /* CipherOutputStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,12 +455,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9089003F178A9CC2005E50B7 /* NSFileManager+iOS.m in Sources */,
 				9077A687178A558500FDA822 /* AESKeyGeneratorTestCase.m in Sources */,
 				9077A68A178A55E200FDA822 /* AESKeyGenerator.m in Sources */,
 				9077A690178A56B700FDA822 /* NSData+Random.m in Sources */,
 				9077A69A178A5A6400FDA822 /* AESKeyFromPasswordTestCase.m in Sources */,
 				9077A6AD178A5DB400FDA822 /* AESCipherTestCase.m in Sources */,
 				9077A6B3178A612500FDA822 /* RSAKeyTestCase.m in Sources */,
+				9089002F178A915C005E50B7 /* AESKeyWrapperTestCase.m in Sources */,
+				9089003A178A9765005E50B7 /* StreamTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +615,7 @@
 				9077A673178A52B000FDA822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9077A674178A52B000FDA822 /* Build configuration list for PBXNativeTarget "CSTCryptoAPITests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +624,7 @@
 				9077A676178A52B000FDA822 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
