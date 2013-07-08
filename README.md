@@ -34,39 +34,37 @@ id<Cipher> cipher = [[AESCipher alloc] init:ENCRYPT withKey:key];
 NSMutableData * ciphertext = [NSMutableData data];  
 [ciphertext appendData:[cipher update:plaintext onError:&error]];  
 [ciphertext appendData:[cipher final:&error]];  
+// Make sure to save the IV for later  
 NSData * iv = cipher.iv;  
   
-// Make sure to save the IV for later
 
-// Decrypt a NSData blob using AES CBC encryption
-NSData * ciphertext = ...;
-NSError * error = nil;
-NSData * iv = ...;
-id<KeyGenerator> keyGen = [[AESKeyGenerator alloc] init];
-id<SecretKey> key = [keyGen generate:128 onError:&error];
-id<Cipher> cipher = [[AESCipher alloc] init:DECRYPT withKey:key iv:iv];
-NSMutableData * plaintext = [NSMutableData data];
-[plaintext appendData:[cipher update:ciphertext onError:&error]];
+
+// Decrypt a NSData blob using AES CBC encryption  
+NSData * ciphertext = ...;  
+NSError * error = nil;  
+NSData * iv = ...;  
+id<KeyGenerator> keyGen = [[AESKeyGenerator alloc] init];  
+id<SecretKey> key = [keyGen generate:128 onError:&error];  
+id<Cipher> cipher = [[AESCipher alloc] init:DECRYPT withKey:key iv:iv];  
+NSMutableData * plaintext = [NSMutableData data];  
+[plaintext appendData:[cipher update:ciphertext onError:&error]];  
 [plaintext appendData:[cipher final:&error]];
 
-// Generate an AES key from a password using PBKDF2
-NSError * error = nil;
-id<KeySpec> keyspec = [[PBKDFKeySpec alloc] init:@"MyPassword"];
-id<SecretKeyFactory> factory = [[PBKDFSecretKeyFactory alloc] init];
+// Generate an AES key from a password using PBKDF2  
+NSError * error = nil;  
+id<KeySpec> keyspec = [[PBKDFKeySpec alloc] init:@"MyPassword"];  
+id<SecretKeyFactory> factory = [[PBKDFSecretKeyFactory alloc] init];  
 id<SecretKey> key = [factory generate:keyspec onError:&error];
 
 // Retrieve RSA public key material from the application keychain and generate a new key if the existing one
-// wasn't found, then encrypt an AESKey for transmission
-NSString * pub_key_in_pem_format = ...;
-NSError * error = nil;
-RSAPublicKey * rsa = [RSAPublicKey findByName:@"mykey" onError:&error];
-if ( !rsa ) {
-  error = nil;
-  rsa = [[RSAPublicKey alloc] initWithBase64:pub_key_in_pem_format name:@"mykey" onError:&error ];
-}
-id<KeyGenerator> keyGen = [[AESKeyGenerator alloc] init];
-id<SecretKey> key = [keyGen generate:128 onError:&error];
+// wasn't found, then encrypt an AESKey for transmission  
+NSString * pub_key_in_pem_format = ...;  
+NSError * error = nil;  
+RSAPublicKey * rsa = [RSAPublicKey findByName:@"mykey" onError:&error];  
+if ( !rsa ) {  
+  error = nil;  
+  rsa = [[RSAPublicKey alloc] initWithBase64:pub_key_in_pem_format name:@"mykey" onError:&error ];  
+}  
+id<KeyGenerator> keyGen = [[AESKeyGenerator alloc] init];  
+id<SecretKey> key = [keyGen generate:128 onError:&error];  
 NSData * encrypted_key = [rsa encrypt:[key key] onError:&error];
-
-
-
