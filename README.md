@@ -13,7 +13,7 @@ Objective-C protocols:
 - KeySpec: represents pre-existing key material for generating SecretKey objects using a SecretKeyFactory
 - SecretKeyFactory: generates a SecretKey from pre-existing key material
 - Cipher: represents an engine for either encrypting plaintext or decrypting ciphertext with a symmetric algorithm
-          and an existingn SecretKey
+          and an existing SecretKey
 - RSAKey: I didn't do much to abstract this.  This should really be called "AsymmetricKey".
 
 Note: the following examples are also included as Unit tests.
