@@ -4,4 +4,24 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+    #import <CommonCrypto/CommonCrypto.h>
+    #import <Security/Security.h>
+    #import <Security/SecRandom.h>
+
+    #import "CSTCryptoAPIConstants.h"
+    #import "NSData+Random.h"
+    #import "NSData+Base64.h"
+    #import "NSString+PEM.h"
+
+    #import "SecretKey.h"
+    #import "KeyGenerator.h"
+
+    #import "AESKey.h"
+    #import "AESKeyGenerator.h"
+    #import "PBKDFSecretKeyFactory.h"
+
+    #import "Cipher.h"
+    #import "AESCipher.h"
+
+    #import "RSAKey.h"
 #endif

@@ -1,13 +1,13 @@
 //
-//  CSTCryptoAPI.h
+//  RSAKeyTestCase.h
 //  CSTCryptoAPI
 //
 //  Created by Christopher Taylor on 7/8/13.
 //  Copyright (c) 2013 Christopher Taylor. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <SenTestingKit/SenTestingKit.h>
 
-@interface CSTCryptoAPI : NSObject
+@interface RSAKeyTestCase : SenTestCase
 
 @end

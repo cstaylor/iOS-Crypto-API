@@ -8,14 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		9077A650178A52AF00FDA822 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9077A64F178A52AF00FDA822 /* Foundation.framework */; };
-		9077A655178A52AF00FDA822 /* CSTCryptoAPI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9077A654178A52AF00FDA822 /* CSTCryptoAPI.h */; };
-		9077A657178A52AF00FDA822 /* CSTCryptoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A656178A52AF00FDA822 /* CSTCryptoAPI.m */; };
 		9077A65F178A52B000FDA822 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9077A65E178A52B000FDA822 /* SenTestingKit.framework */; };
 		9077A661178A52B000FDA822 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9077A660178A52B000FDA822 /* UIKit.framework */; };
 		9077A662178A52B000FDA822 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9077A64F178A52AF00FDA822 /* Foundation.framework */; };
 		9077A665178A52B000FDA822 /* libCSTCryptoAPI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9077A64C178A52AF00FDA822 /* libCSTCryptoAPI.a */; };
 		9077A66B178A52B000FDA822 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9077A669178A52B000FDA822 /* InfoPlist.strings */; };
-		9077A66E178A52B000FDA822 /* CSTCryptoAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A66D178A52B000FDA822 /* CSTCryptoAPITests.m */; };
+		9077A687178A558500FDA822 /* AESKeyGeneratorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A686178A558500FDA822 /* AESKeyGeneratorTestCase.m */; };
+		9077A689178A55E200FDA822 /* AESKeyGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A688178A55E200FDA822 /* AESKeyGenerator.m */; };
+		9077A68A178A55E200FDA822 /* AESKeyGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A688178A55E200FDA822 /* AESKeyGenerator.m */; };
+		9077A68F178A56B700FDA822 /* NSData+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A68E178A56B700FDA822 /* NSData+Random.m */; };
+		9077A690178A56B700FDA822 /* NSData+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A68E178A56B700FDA822 /* NSData+Random.m */; };
+		9077A692178A57D500FDA822 /* AESKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A691178A57D500FDA822 /* AESKey.m */; };
+		9077A694178A583200FDA822 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9077A693178A583200FDA822 /* Security.framework */; };
+		9077A695178A587C00FDA822 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9077A693178A583200FDA822 /* Security.framework */; };
+		9077A697178A5A1D00FDA822 /* PBKDFSecretKeyFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A696178A5A1D00FDA822 /* PBKDFSecretKeyFactory.m */; };
+		9077A69A178A5A6400FDA822 /* AESKeyFromPasswordTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A699178A5A6400FDA822 /* AESKeyFromPasswordTestCase.m */; };
+		9077A69C178A5B2100FDA822 /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A69B178A5B2100FDA822 /* AESCipher.m */; };
+		9077A6A1178A5BA900FDA822 /* RSAPublicKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A6A0178A5BA900FDA822 /* RSAPublicKey.m */; };
+		9077A6A5178A5BE700FDA822 /* NSString+PEM.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A6A4178A5BE700FDA822 /* NSString+PEM.m */; };
+		9077A6AA178A5C3300FDA822 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A6A9178A5C3300FDA822 /* NSData+Base64.m */; };
+		9077A6AD178A5DB400FDA822 /* AESCipherTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A6AC178A5DB400FDA822 /* AESCipherTestCase.m */; };
+		9077A6B0178A5E7100FDA822 /* RSAKey+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A6AF178A5E7100FDA822 /* RSAKey+Private.m */; };
+		9077A6B3178A612500FDA822 /* RSAKeyTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9077A6B2178A612500FDA822 /* RSAKeyTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +49,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				9077A655178A52AF00FDA822 /* CSTCryptoAPI.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,15 +58,43 @@
 		9077A64C178A52AF00FDA822 /* libCSTCryptoAPI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCSTCryptoAPI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9077A64F178A52AF00FDA822 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9077A653178A52AF00FDA822 /* CSTCryptoAPI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSTCryptoAPI-Prefix.pch"; sourceTree = "<group>"; };
-		9077A654178A52AF00FDA822 /* CSTCryptoAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSTCryptoAPI.h; sourceTree = "<group>"; };
-		9077A656178A52AF00FDA822 /* CSTCryptoAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSTCryptoAPI.m; sourceTree = "<group>"; };
 		9077A65D178A52B000FDA822 /* CSTCryptoAPITests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSTCryptoAPITests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9077A65E178A52B000FDA822 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9077A660178A52B000FDA822 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9077A668178A52B000FDA822 /* CSTCryptoAPITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CSTCryptoAPITests-Info.plist"; sourceTree = "<group>"; };
 		9077A66A178A52B000FDA822 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9077A66C178A52B000FDA822 /* CSTCryptoAPITests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSTCryptoAPITests.h; sourceTree = "<group>"; };
-		9077A66D178A52B000FDA822 /* CSTCryptoAPITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSTCryptoAPITests.m; sourceTree = "<group>"; };
+		9077A679178A536A00FDA822 /* AESCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
+		9077A67A178A536A00FDA822 /* AESKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESKey.h; sourceTree = "<group>"; };
+		9077A67B178A536A00FDA822 /* AESKeyGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESKeyGenerator.h; sourceTree = "<group>"; };
+		9077A67C178A536A00FDA822 /* Cipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cipher.h; sourceTree = "<group>"; };
+		9077A67D178A536A00FDA822 /* KeyGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyGenerator.h; sourceTree = "<group>"; };
+		9077A67E178A536A00FDA822 /* PBKDFSecretKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PBKDFSecretKeyFactory.h; sourceTree = "<group>"; };
+		9077A67F178A536A00FDA822 /* SecretKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretKey.h; sourceTree = "<group>"; };
+		9077A680178A536A00FDA822 /* SecretKeyFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretKeyFactory.h; sourceTree = "<group>"; };
+		9077A685178A558500FDA822 /* AESKeyGeneratorTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESKeyGeneratorTestCase.h; sourceTree = "<group>"; };
+		9077A686178A558500FDA822 /* AESKeyGeneratorTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESKeyGeneratorTestCase.m; sourceTree = "<group>"; };
+		9077A688178A55E200FDA822 /* AESKeyGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESKeyGenerator.m; sourceTree = "<group>"; };
+		9077A68B178A566200FDA822 /* CSTCryptoAPIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTCryptoAPIConstants.h; sourceTree = "<group>"; };
+		9077A68D178A56B700FDA822 /* NSData+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Random.h"; sourceTree = "<group>"; };
+		9077A68E178A56B700FDA822 /* NSData+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Random.m"; sourceTree = "<group>"; };
+		9077A691178A57D500FDA822 /* AESKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESKey.m; sourceTree = "<group>"; };
+		9077A693178A583200FDA822 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9077A696178A5A1D00FDA822 /* PBKDFSecretKeyFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PBKDFSecretKeyFactory.m; sourceTree = "<group>"; };
+		9077A698178A5A6400FDA822 /* AESKeyFromPasswordTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESKeyFromPasswordTestCase.h; sourceTree = "<group>"; };
+		9077A699178A5A6400FDA822 /* AESKeyFromPasswordTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESKeyFromPasswordTestCase.m; sourceTree = "<group>"; };
+		9077A69B178A5B2100FDA822 /* AESCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCipher.m; sourceTree = "<group>"; };
+		9077A69E178A5B8400FDA822 /* RSAKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAKey.h; sourceTree = "<group>"; };
+		9077A6A0178A5BA900FDA822 /* RSAPublicKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAPublicKey.m; sourceTree = "<group>"; };
+		9077A6A3178A5BE700FDA822 /* NSString+PEM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PEM.h"; sourceTree = "<group>"; };
+		9077A6A4178A5BE700FDA822 /* NSString+PEM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PEM.m"; sourceTree = "<group>"; };
+		9077A6A8178A5C3300FDA822 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		9077A6A9178A5C3300FDA822 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		9077A6AB178A5DB400FDA822 /* AESCipherTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCipherTestCase.h; sourceTree = "<group>"; };
+		9077A6AC178A5DB400FDA822 /* AESCipherTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCipherTestCase.m; sourceTree = "<group>"; };
+		9077A6AE178A5E7100FDA822 /* RSAKey+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSAKey+Private.h"; sourceTree = "<group>"; };
+		9077A6AF178A5E7100FDA822 /* RSAKey+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RSAKey+Private.m"; sourceTree = "<group>"; };
+		9077A6B1178A612500FDA822 /* RSAKeyTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAKeyTestCase.h; sourceTree = "<group>"; };
+		9077A6B2178A612500FDA822 /* RSAKeyTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAKeyTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9077A694178A583200FDA822 /* Security.framework in Frameworks */,
 				9077A650178A52AF00FDA822 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9077A695178A587C00FDA822 /* Security.framework in Frameworks */,
 				9077A65F178A52B000FDA822 /* SenTestingKit.framework in Frameworks */,
 				9077A661178A52B000FDA822 /* UIKit.framework in Frameworks */,
 				9077A662178A52B000FDA822 /* Foundation.framework in Frameworks */,
@@ -82,6 +125,7 @@
 		9077A643178A52AF00FDA822 = {
 			isa = PBXGroup;
 			children = (
+				9077A693178A583200FDA822 /* Security.framework */,
 				9077A651178A52AF00FDA822 /* CSTCryptoAPI */,
 				9077A666178A52B000FDA822 /* CSTCryptoAPITests */,
 				9077A64E178A52AF00FDA822 /* Frameworks */,
@@ -111,9 +155,14 @@
 		9077A651178A52AF00FDA822 /* CSTCryptoAPI */ = {
 			isa = PBXGroup;
 			children = (
-				9077A654178A52AF00FDA822 /* CSTCryptoAPI.h */,
-				9077A656178A52AF00FDA822 /* CSTCryptoAPI.m */,
+				9077A6A6178A5C1100FDA822 /* Categories */,
+				9077A69D178A5B6500FDA822 /* RSAKey */,
+				9077A684178A547800FDA822 /* KeyGenerator */,
+				9077A683178A546500FDA822 /* SecretKeyFactory */,
+				9077A682178A545600FDA822 /* Cipher */,
+				9077A681178A543400FDA822 /* SecretKey */,
 				9077A652178A52AF00FDA822 /* Supporting Files */,
+				9077A68B178A566200FDA822 /* CSTCryptoAPIConstants.h */,
 			);
 			path = CSTCryptoAPI;
 			sourceTree = "<group>";
@@ -129,9 +178,15 @@
 		9077A666178A52B000FDA822 /* CSTCryptoAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				9077A66C178A52B000FDA822 /* CSTCryptoAPITests.h */,
-				9077A66D178A52B000FDA822 /* CSTCryptoAPITests.m */,
 				9077A667178A52B000FDA822 /* Supporting Files */,
+				9077A685178A558500FDA822 /* AESKeyGeneratorTestCase.h */,
+				9077A686178A558500FDA822 /* AESKeyGeneratorTestCase.m */,
+				9077A698178A5A6400FDA822 /* AESKeyFromPasswordTestCase.h */,
+				9077A699178A5A6400FDA822 /* AESKeyFromPasswordTestCase.m */,
+				9077A6AB178A5DB400FDA822 /* AESCipherTestCase.h */,
+				9077A6AC178A5DB400FDA822 /* AESCipherTestCase.m */,
+				9077A6B1178A612500FDA822 /* RSAKeyTestCase.h */,
+				9077A6B2178A612500FDA822 /* RSAKeyTestCase.m */,
 			);
 			path = CSTCryptoAPITests;
 			sourceTree = "<group>";
@@ -143,6 +198,94 @@
 				9077A669178A52B000FDA822 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9077A681178A543400FDA822 /* SecretKey */ = {
+			isa = PBXGroup;
+			children = (
+				9077A691178A57D500FDA822 /* AESKey.m */,
+				9077A67F178A536A00FDA822 /* SecretKey.h */,
+				9077A67A178A536A00FDA822 /* AESKey.h */,
+			);
+			name = SecretKey;
+			sourceTree = "<group>";
+		};
+		9077A682178A545600FDA822 /* Cipher */ = {
+			isa = PBXGroup;
+			children = (
+				9077A69B178A5B2100FDA822 /* AESCipher.m */,
+				9077A67C178A536A00FDA822 /* Cipher.h */,
+				9077A679178A536A00FDA822 /* AESCipher.h */,
+			);
+			name = Cipher;
+			sourceTree = "<group>";
+		};
+		9077A683178A546500FDA822 /* SecretKeyFactory */ = {
+			isa = PBXGroup;
+			children = (
+				9077A696178A5A1D00FDA822 /* PBKDFSecretKeyFactory.m */,
+				9077A67E178A536A00FDA822 /* PBKDFSecretKeyFactory.h */,
+				9077A680178A536A00FDA822 /* SecretKeyFactory.h */,
+			);
+			name = SecretKeyFactory;
+			sourceTree = "<group>";
+		};
+		9077A684178A547800FDA822 /* KeyGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				9077A688178A55E200FDA822 /* AESKeyGenerator.m */,
+				9077A67B178A536A00FDA822 /* AESKeyGenerator.h */,
+				9077A67D178A536A00FDA822 /* KeyGenerator.h */,
+			);
+			name = KeyGenerator;
+			sourceTree = "<group>";
+		};
+		9077A68C178A56A800FDA822 /* NSData+Random */ = {
+			isa = PBXGroup;
+			children = (
+				9077A68D178A56B700FDA822 /* NSData+Random.h */,
+				9077A68E178A56B700FDA822 /* NSData+Random.m */,
+			);
+			name = "NSData+Random";
+			sourceTree = "<group>";
+		};
+		9077A69D178A5B6500FDA822 /* RSAKey */ = {
+			isa = PBXGroup;
+			children = (
+				9077A69E178A5B8400FDA822 /* RSAKey.h */,
+				9077A6A0178A5BA900FDA822 /* RSAPublicKey.m */,
+				9077A6AE178A5E7100FDA822 /* RSAKey+Private.h */,
+				9077A6AF178A5E7100FDA822 /* RSAKey+Private.m */,
+			);
+			name = RSAKey;
+			sourceTree = "<group>";
+		};
+		9077A6A2178A5BC800FDA822 /* NSString+PEM */ = {
+			isa = PBXGroup;
+			children = (
+				9077A6A3178A5BE700FDA822 /* NSString+PEM.h */,
+				9077A6A4178A5BE700FDA822 /* NSString+PEM.m */,
+			);
+			name = "NSString+PEM";
+			sourceTree = "<group>";
+		};
+		9077A6A6178A5C1100FDA822 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9077A6A7178A5C1D00FDA822 /* NSData+Base64 */,
+				9077A68C178A56A800FDA822 /* NSData+Random */,
+				9077A6A2178A5BC800FDA822 /* NSString+PEM */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		9077A6A7178A5C1D00FDA822 /* NSData+Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				9077A6A8178A5C3300FDA822 /* NSData+Base64.h */,
+				9077A6A9178A5C3300FDA822 /* NSData+Base64.m */,
+			);
+			name = "NSData+Base64";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +386,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9077A657178A52AF00FDA822 /* CSTCryptoAPI.m in Sources */,
+				9077A689178A55E200FDA822 /* AESKeyGenerator.m in Sources */,
+				9077A68F178A56B700FDA822 /* NSData+Random.m in Sources */,
+				9077A692178A57D500FDA822 /* AESKey.m in Sources */,
+				9077A697178A5A1D00FDA822 /* PBKDFSecretKeyFactory.m in Sources */,
+				9077A69C178A5B2100FDA822 /* AESCipher.m in Sources */,
+				9077A6A1178A5BA900FDA822 /* RSAPublicKey.m in Sources */,
+				9077A6A5178A5BE700FDA822 /* NSString+PEM.m in Sources */,
+				9077A6AA178A5C3300FDA822 /* NSData+Base64.m in Sources */,
+				9077A6B0178A5E7100FDA822 /* RSAKey+Private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +402,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9077A66E178A52B000FDA822 /* CSTCryptoAPITests.m in Sources */,
+				9077A687178A558500FDA822 /* AESKeyGeneratorTestCase.m in Sources */,
+				9077A68A178A55E200FDA822 /* AESKeyGenerator.m in Sources */,
+				9077A690178A56B700FDA822 /* NSData+Random.m in Sources */,
+				9077A69A178A5A6400FDA822 /* AESKeyFromPasswordTestCase.m in Sources */,
+				9077A6AD178A5DB400FDA822 /* AESCipherTestCase.m in Sources */,
+				9077A6B3178A612500FDA822 /* RSAKeyTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
