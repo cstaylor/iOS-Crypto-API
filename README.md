@@ -21,31 +21,21 @@ Note: the following examples are also included as Unit tests.
 Here's some examples of what you can do:
 
 // Generate a new AES 128-bit key using random data
-NSError * error = nil;
-id<KeyGenerator> keyGen = [[AESKeyGenerator alloc] init];
-\id<SecretKey> key = [keyGen generate:128 onError:&error];
+NSError * error = nil;  
+id<KeyGenerator> keyGen = [[AESKeyGenerator alloc] init];  
+id<SecretKey> key = [keyGen generate:128 onError:&error];  
 
-
-// Encrypt a NSData blob using AES CBC encryption
-
-NSData * plaintext = ...;
-
-NSError * error = nil;
-
-id<KeyGenerator> keyGen = [[AESKeyGenerator alloc] init];
-
-id<SecretKey> key = [keyGen generate:128 onError:&error];
-
-id<Cipher> cipher = [[AESCipher alloc] init:ENCRYPT withKey:key];
-
-NSMutableData * ciphertext = [NSMutableData data];
-
-[ciphertext appendData:[cipher update:plaintext onError:&error]];
-
-[ciphertext appendData:[cipher final:&error]];
-
-NSData * iv = cipher.iv;
-
+// Encrypt a NSData blob using AES CBC encryption  
+NSData * plaintext = ...;  
+NSError * error = nil;  
+id<KeyGenerator> keyGen = [[AESKeyGenerator alloc] init];  
+id<SecretKey> key = [keyGen generate:128 onError:&error];  
+id<Cipher> cipher = [[AESCipher alloc] init:ENCRYPT withKey:key];  
+NSMutableData * ciphertext = [NSMutableData data];  
+[ciphertext appendData:[cipher update:plaintext onError:&error]];  
+[ciphertext appendData:[cipher final:&error]];  
+NSData * iv = cipher.iv;  
+  
 // Make sure to save the IV for later
 
 // Decrypt a NSData blob using AES CBC encryption
