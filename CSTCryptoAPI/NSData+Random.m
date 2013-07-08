@@ -10,6 +10,7 @@
         memset ( (void*)data, 0x0, size );
         OSStatus err = SecRandomCopyBytes ( kSecRandomDefault, byte_length, data );
         if ( !err ) ret_val = [NSData dataWithBytes:data length:byte_length];
+        free ( data );
     }
     return ret_val;
 }
