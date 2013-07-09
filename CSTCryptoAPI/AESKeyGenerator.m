@@ -17,11 +17,9 @@ const NSInteger ILLEGAL_KEY_SIZE = 200;
     id<SecretKey> ret_val = nil;
     
     NSData * symmetricKey = [NSData random:keysize_value];
-    OSStatus err = SecRandomCopyBytes ( kSecRandomDefault, keysize_value, (uint8_t*)[symmetricKey bytes] );
-    if ( err ) *error = [NSError errorWithDomain:@"world"
-                                 code:ILLEGAL_KEY_SIZE
-                                 userInfo:@{NSLocalizedDescriptionKey:[NSString stringWithFormat:@"Illegal keysize: %d",
-                                                                                keysize ] } ];
+    if ( !symmetricKey ) *error = [NSError errorWithDomain:@"world"
+                                           code:ILLEGAL_KEY_SIZE
+                                           userInfo:@{NSLocalizedDescriptionKey:[NSString stringWithFormat:@"Illegal keysize: %d", keysize ] } ];
     else {
         ret_val = [[AESKey alloc] init:symmetricKey keySize:keysize];
     }
