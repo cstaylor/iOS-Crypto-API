@@ -37,9 +37,11 @@
         PBKDFKeySpec* pbk_spec = (PBKDFKeySpec*)spec;
         OSStatus result = 0;
         NSMutableData *derivedKey = [NSMutableData dataWithLength:DEFAULT_KEYSIZE];
+        const char * utf8Password = pbk_spec.password.UTF8String;
+        size_t uf8PasswordLength = strlen ( utf8Password );
         result = CCKeyDerivationPBKDF(kCCPBKDF2,
-                                      pbk_spec.password.UTF8String,
-                                      pbk_spec.password.length,
+                                      utf8Password,
+                                      uf8PasswordLength,
                                       pbk_spec.salt.bytes,
                                       pbk_spec.salt.length,
                                       kCCPRFHmacAlgSHA1,
