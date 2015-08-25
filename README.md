@@ -8,6 +8,7 @@ From my personal experience, I've found the iOS native cryptography options to b
 
 So, to insulate my apps from the underlying implementations, I've borrowed from the JCE and implemented several
 Objective-C protocols:
+
 - KeyGenerator: creates new SecretKey objects
 - SecretKey: represents a symmetric key
 - KeySpec: represents pre-existing key material for generating SecretKey objects using a SecretKeyFactory
@@ -20,6 +21,7 @@ Note: the following examples are also included as Unit tests.
 
 Here's some examples of what you can do:
 
+```csharp
 // Generate a new AES 128-bit key using random data
 NSError * error = nil;  
 id<KeyGenerator> keyGen = [[AESKeyGenerator alloc] init];  
@@ -68,3 +70,4 @@ if ( !rsa ) {
 id<KeyGenerator> keyGen = [[AESKeyGenerator alloc] init];  
 id<SecretKey> key = [keyGen generate:128 onError:&error];  
 NSData * encrypted_key = [rsa encrypt:[key key] onError:&error];
+```
